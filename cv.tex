@@ -1,0 +1,541 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,7 pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+\usepackage{dirtytalk}
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{academicons}
+% \usepackage{savetrees}[moderate]
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Md Shazid Islam} \\[7.5pt]
+\href{https://shazidislam.com/}{\raisebox{-0.05\height}\faHome\ Website} \ $|$\
+\href{https://github.com/ShazidAraf}{\raisebox{-0.05\height}\faGithub\ Github} \ $|$ \
+\href{https://www.linkedin.com/in/md-shazid-islam-1b0993121/}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$ \
+\href{https://scholar.google.com/citations?user=0kXrLjMAAAAJ}{\raisebox{-0.05\height}\aiGoogleScholar Google Scholar}\ $|$ \
+\href{misla048@ucr.edu}{\raisebox{-0.05\height}\faEnvelope \ misla048@ucr.edu} \ $|$ \ 
+\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +1 951-573-2139} \\
+% Immigration Status: Applied for Permanent Residency (I-140 approved) , Currently F-1
+\end{tabularx}
+
+
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+% \href{https://scholar.google.com/citations?hl=en&user=0kXrLjMAAAAJ}{\includegraphics[width=0.05\textwidth]{images/GS.png}\\Google\\ Scholar}\\
+
+
+%Interests/ Keywords/ Summary
+\section{Introduction}
+I  am a fifth year Ph.D. student, motivated to work in Machine Learning, Deep Learning, and Computer Vision related fields with a focus on Bio-Medical image analysis.
+I have experiences on 2D and 3D Segmentation, 3D Reconstruction, Domain Adaptation, Vision-Language Models, Multimodal learning,  Federated Learning. I have also worked with Generative Adversarial Network (GAN) , Graph Neural Network (GNN) , Transformers, Active Learning, Tracking and  Human pose. I'm interested in improving state-of-the-art technologies, and eventually deploying them in real-world settings.
+
+
+
+% change the intro
+% SQL, data science related, novelty
+% T5 google, llama, alpaca (instruction tuning), vecuna, chain of thought, in context example 
+
+% Parameter Efficient Tuning
+% LAVA - 2023, CLIP, Adapter which one?
+% Honey Bee
+% FERRET apple
+% EGO meta
+
+\section{Education}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{University of California, Riverside, CA, USA} & \hfill Sept 2020 - present \\[3.75pt]
+\multicolumn{1}{@{}X@{}}{Ph.D. in Electrical and Computer Engineering (advanced to candidacy)}\\
+
+\multicolumn{1}{@{}X@{}}{Advisor: Dr. Amit K. Roy-Chowdhury} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Bangladesh University of Engineering and Technology, Bangladesh} & \hfill Oct 2017 - July 2020 \\[3.75pt]
+\multicolumn{1}{@{}X@{}}{MSc. in Electrical and Electronic Engineering (CGPA: 4.00)}\\
+\multicolumn{1}{@{}X@{}}{Advisor: Dr. S.M. Mahbubur Rahman} \\
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Bangladesh University of Engineering and Technology, Bangladesh} & \hfill Feb 2013 - Sept 2017 \\[3.75pt]
+\multicolumn{1}{@{}X@{}}{BSc. in Electrical and Electronic Engineering (CGPA: 3.89)}\\
+\multicolumn{1}{@{}X@{}}{Advisor: Dr. Mohammad Ariful Haque} \\
+
+\end{tabularx}
+
+
+
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Designation} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%         \item[--] long long line of blah blah that will wrap when the table fills the column width
+%         \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+
+%Projects
+\section{RESEARCH INTEREST}
+
+\begin{itemize}
+    \item Computer Vision , Vision Language Models, Image and Video Processing, Signal Processing
+    \item Deep Learning , Machine Learning
+    \item Medical imaging , Bio Imaging, Biomechanical Signal, Computational Biology
+    \item Multi-Modal Learning ,  Time-Series data Analysis
+    \item Federated Learning
+    % \item Renewable Energy
+
+\end{itemize}
+
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{TECHNICAL SKILL}
+
+\begin{tabular}{ll}
+\textbf{Programming / Scripting} & Python, C, C++, C\#, ASSEMBLY (80X86)\\ & MATLAB, Verilog\\
+
+\textbf{Machine Learning Libraries} & PyTorch, Keras, TensorFlow, CUDA\\
+\textbf{Machine Learning Platform} & HPCC Clusters , AWS, Google Colab \\
+\textbf{Foundation Models Finetuning}& Cellpose, SAM, Med-SAM, \\ & CLIP, Med-CLIP, -SAM, LLaVA\\
+\textbf{Computer Vision Libraries}& Open3D, OpenCV\\
+\textbf{Bio Imaging Softwares}& MorphographX, SimpleITK, Cellpose\\
+\textbf{Biomedical Data}& Microscopic (CLSM) imaging, CT, MRI, X-ray, Ultrasound\\
+\textbf{Data Analysis Libraries}& Scikit-learn, Pandas, Numpy\\
+\textbf{Device Simulation} & PSpice, Proteus ARES\\
+\textbf{Others} & LaTeX, MS Office, GIT, Docker
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{RESEARCH EXPERIENCE}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Graduate Student Researcher} & \hfill Sept. 2020 – Present \\[3.75pt]
+\multicolumn{1}{@{}X@{}}{Vision and Learning Group, UC Riverside, CA, USA}\\
+\multicolumn{1}{@{}X@{}}{Advisor: Dr. Amit K. Roy-Chowdhury} \\
+% \multicolumn{1}{@{}X@{}}{Project: Bio Image Analysis on Plant Cells} 
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Graduate Student Researcher} & \hfill Jan. 2019 – June, 2020 \\[3.75pt]
+\multicolumn{1}{@{}X@{}}{Bangladesh University of Engineering and Technology, Dhaka, Bangladesh}\\
+\multicolumn{1}{@{}X@{}}{Advisor: Dr. SM Mahbubur Rahman} \\ \\
+% \multicolumn{1}{@{}X@{}}{Project: Bio Image Analysis on Plant Cells} 
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Volunteer Research Assistant} & \hfill June 2018 – Dec. 2018 \\[3.75pt]
+\multicolumn{1}{@{}X@{}}{Independent University Bangladesh, Dhaka, Bangladesh}\\
+\multicolumn{1}{@{}X@{}}{ Advisor: Dr. M. Ashraful Amin} \\ \\
+
+
+\textbf{Undergraduate Student Researcher} & \hfill Sept. 2016 – Sept. 2017 \\[3.75pt]
+\multicolumn{1}{@{}X@{}}{Bangladesh University of Engineering and Technology, Dhaka, Bangladesh}\\
+\multicolumn{1}{@{}X@{}}{ Advisor: Dr. Mohammad Ariful Haque} \\ \\
+% \multicolumn{1}{@{}X@{}}{Project: Bio Image Analysis on Plant Cells} 
+\end{tabularx}
+
+
+% \section{Teaching Experience}
+% \begin{tabularx}{\linewidth}{@{}l X@{}}
+
+% \textbf{Teaching Assistant, UC Riverside}\\[3.75pt]
+% EE 030: Fundamentals of Electric Circuits I & \hfill Fall 2022, Fall 2023, Fall 2024 \\
+% EE 110B: Signals and Systems & \hfill Spring 2022, Spring 2023 \\
+
+% \textbf{Part Time Lecturer} & \hfill Jan 2019 - May 2020\\[3.75pt]
+% Electrical and Electronic Engineering \\
+% Green University of Bangladesh \\
+
+% \textbf{Adjunct Lecturer} & \hfill Jan 2018 - Dec 2018\\[3.75pt]
+% Electrical, Electronic and Communication Engineering \\
+% Military Institute of Science and Technology \\
+
+% \end{tabularx}
+
+
+\section{RESEARCH PROJECTS}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Bio Image Analysis on Plant Cells (3D + time data) -  \href{https://ieeexplore.ieee.org/abstract/document/10820545}{paper}} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] 3D Segmentation, 3D Reconstruction and Registration of volumetric plant cell data,
+        \item[--] Developing a novel deep learning based algorithm to perform spatio-temporal tracking of plant cells and detect cell division utilizing Graph Neural Network (GNN).
+        % \item[--] This work was partially supported by \textbf{NSF grants OAC-2411453, OAC-1664172, DMS-1762063, DMS-2029814 and IOS-2055690.}
+        
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Active Learning using Vision Language Models for Medical Image Segmentaion} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--]  A novel framework to use language for Active Learning instead of annotation based active learning.
+
+        \item[--]  Bypassing budget constraint in Active learning by Language Guided Annotation.
+
+        \item[--]  Utilizing foundation models Med-SAM, Med-CLIP, GPT 4,
+
+        % \item[--] Instruction based shape manipulation using Active contours.
+        
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Online Domain Adaptive Medical Image Segmentation - \href{https://arxiv.org/abs/2312.05407}{paper}} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Human internal organ segmentation from volumetric data in source free domain adaptation setting where adaptation is done online with budget expert guidance.
+        \item[--] Developing a novel image pruning technique to reduce manual annotation burden in active learning setup.
+        % \item[--] This work was partially supported by  \textbf{NSF grant 1762063, 2411453}.
+        
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Gait Phase Analysis -\href{https://link.springer.com/chapter/10.1007/978-981-97-3562-4_29}{paper}} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Proposed a novel algorithm to classify the Gait Phases in three different locomotion modes (DNS, UPS, and WAK) using s-EMG signal. 
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Drosophila Wing Disc Analysis} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] 3D Segmentation, 3D Reconstruction of Drosophila Wing Disc.
+        \item[--] Uncertainty Quantification of Segmentation Quality in the absence of ground truth segmentation during test time. 
+        % \item[--] This work was partially supported by \textbf{NSF grants 1762063}
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{BRIAR (BIOMETRIC RECOGNITION and IDENTIFICATION at ALTITUDE and RANGE)} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Tracking and Silhouette extraction (segmentation) of multiple people in the presence of occlusion.
+        \item[--] Biometric Recognition using GAIT and ReID features.
+        
+        
+        % \item[--] This work was supported by IARPA
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Asynchronous Federated Learning}\\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Addressing the straggler issue in Asynchronous federated learning by developing a delay-aware modification.
+        \item[--] Proposing two novelties: buffer diversification and assigning weights based on client contribution estimation which boosts performance significantly.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Generating Style Specific Dances \href{https://youtu.be/ATaC7Cj0UIA}{\raisebox{-0.05\height}\faYoutube\ demo} / \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4735109}{paper} }
+\\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Predicting poses to generate dances of different styles using multi-modal (audio-visual) information by CNN-LSTM-MDN model..
+        \item[--] Generating a video of target person dancing in those styles using Generative Adversarial Network (GAN).
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Domain Adaptive Solar Power Prediction -  \href{https://ieeexplore.ieee.org/abstract/document/10407265?casa_token=XJ3KYmxIrswAAAAA:l0OZrlJg36z_QRhukx2hxqQqFvHKQJom0pAFiDlTVVURLNgjfel5LveVzR8Af2Ec8m_5BAs9}{paper}} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Predicting Solar power in a domain adaptation approach where  distribution shift occurs (due to weather features) across different locations in USA.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Rain Precipitation Prediction } \\
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%         \item[--] Tracking and Silhouette extraction of multiple people in the presence of occlusion.
+%         \item[--] Biometric Recognition using GAIT and ReID features.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+\\
+
+
+
+
+% \clearpage
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%------------------------------------------------------------
+
+\section{Publications}
+
+
+
+\begin{itemize}
+
+\item \textbf{Md Shazid Islam}, Arindam Dutta, Calvin-Khang Ta, Kevin Rodriguez, Christian Michael, Mark Alber, G. Venugopala Reddy, Amit K. Roy Chowdhury, \say{ \textit{DEGAST3D : Learning Deformable 3D Graph Similarity to Track Plant Cells in Unregistered Time Lapse Images
+}}, IEEE Transactions on Computational Biology and Bioinformatics, 2025. \href{https://ieeexplore.ieee.org/abstract/document/10820545}{ paper}
+
+% \item \textbf{Md Shazid Islam}, SM Mahbubur Rahman, \say{ \textit{Synthesis of Dance by Learning Body Gestures from Music}} , Multimedia Tools and Applications, 2025
+% \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4735109}
+% {\raisebox{-0.05\height}\ paper} \href{https://youtu.be/ATaC7Cj0UIA}{\raisebox{-0.05\height}\ Video}
+
+\item \textbf{Md Shazid Islam}, Sayak Nag, Arindam Dutta, Miraj Ahmed, Fahim Faisal Niloy, Amit K. Roy Chowdhury, \say{ \textit{ODES: Domain Adaptation with Expert Guidance for Online Medical Image Segmentation
+}} (under review) \href{https://arxiv.org/abs/2312.05407}
+{pre-print}
+
+\item \textbf{Md Shazid Islam}, Shreyangshu Bera, Sudipta Paul, Arindam Dutta, Amit K. Roy Chowdhury, \say{ \textit{LINGUAL: Language-INtegrated GUidance in Active
+Learning: Applications in Medical Image
+Segmentation
+}} (under review)
+
+
+\item Md Sanzid Bin Hossain, \textbf{Md Shazid Islam} , Md Saad Ul Haque Md Saydur Rahman  \say{ \textit{Gait Phase Classification from sEMG in
+Multiple Locomotion Mode Using Deep Learning}}, 9th International Congress on Information and Communication Technology, London, UK, 2024.
+
+\item \textbf{Md Shazid Islam}, M Yashwanth, Xiangyu Chang, Anirban Chakraborty, Srikanth Krishnamurthy, Amit Roy-Chowdhury, \say{ \textit{DAAFL: Delay Aware Asynchronous Federated Learning}} (under review)
+
+
+
+\item \textbf{Md Shazid Islam}, ASM Jahid Hasan, Md Saydur Rahman, Jubair Yusuf, Md Saiful Islam Sajal, Farhana Akter Tumpa,  \say{ \textit{Location Agnostic Source-Free Domain Adaptive
+Learning to Predict Solar Power Generation}}, IEEE International Conference on Energy Technologies for Future Grids, Wollongong, Australia, 2023.
+
+\item Md Saiful Islam Sajol, ASM Jahid Hasan, \textbf{Md Shazid Islam} and Md Saydur Rahman, \say{\textit{ A ConvNeXt V2 Approach to Document Image Analysis: Enhancing High-Accuracy Classification}}, IEEE 3rd Conference on Information Technology and Data Science, Debrecen, Hungary, 2024
+ 
+
+
+
+
+\item \textbf{Md Shazid Islam}, SM Mahbubur Rahman, \say{ \textit{Synthesis of Dance by Learning Body Gestures from Music}} (under review )
+\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4735109}
+{\raisebox{-0.05\height}\ pre-print} \href{https://youtu.be/ATaC7Cj0UIA}{\raisebox{-0.05\height}\ Video}
+
+
+
+% \item ASM Jahid Hasan, Jubair Yusuf, Md Saydur Rahman and \textbf{Md Shazid Islam} , \say{ \textit{Electricity Cost Optimization for Large Loads through Energy Storage and Renewable Energy}}, IEEE International Conference on Information and Communication Technology for Sustainable Development (ICICT4SD), Dhaka, Bangladesh, 2023.
+
+\item ASM Jahid Hasan, Md Saydur Rahman, \textbf{Md Shazid Islam} and Jubair Yusuf,\say{ \textit{Data Driven Energy Theft Localization in
+a Distribution Network}}, IEEE International Conference on Information and Communication Technology for Sustainable Development (ICICT4SD), 2023.
+
+% \item  \textbf{Md Shazid Islam}, Md Saydur Rahman, Md Saad Ul Haque, Farhana Akter Tumpa, Md Sanzid Bin Hossain, Abul Al Arabi, \say{\textit{Location Agnostic Adaptive
+% Rain Precipitation Prediction using Deep Learning}}, 9th IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering, Kerala, India, 2023.
+
+% \item Md Saydur Rahman, Farhana Akter Tumpa, \textbf{Md Shazid Islam}, Abul Al Arabi, Md Sanzid Bin Hossain, Md Saad Ul Haque, \say{\textit{Comparative Evaluation of Weather Forecasting using Machine Learning Models}}, 26th IEEE  International Conference on Computer and Information Technology (ICCIT), Cox's Bazar, Bangladesh, 2023.
+
+\item Md Saiful Islam Sajol, ASM Jahid Hasan, \textbf{Md Shazid Islam} and Md Saydur Rahman, \say{\textit{ Transforming Social Media Analysis: TweetEval Benchmarking with Advanced Transformer Models}}, International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT), Ankara, Turkey, 2024.
+
+\item \textbf{Md Shazid Islam}, Md Saydur Rahman, M Ashraful Amin, \say{ \textit{Beat Based Realistic Dance Video Generation using Deep Learning}}, IEEE International Conference on Robotics, Automation, Artificial-intelligence and Internet-of-Things, 2019.
+    
+\end{itemize}
+
+
+
+
+% \section{Future Publications}
+
+
+
+% \begin{itemize}
+%     \item \textbf{Md Shazid Islam}, Sayak Nag, Arindam Dutta, Miraj Ahmed, Fahim Faisal Niloy, Amit K. Roy Chowdhury, \say{ \textit{Active Learning Guided Federated Online Adaptation: Applications in Medical
+% Image Segmentation}} (under review) \href{https://arxiv.org/abs/2312.05407}
+% {\raisebox{-0.05\height}\ pre-print} 
+
+%     \item \textbf{Md Shazid Islam}, Arindam Dutta, Calvin-Khang Ta, Kevin Rodriguez, Christian Michael, Mark Alber, G. Venugopala Reddy, Amit K. Roy Chowdhury, \say{ \textit{ Learning Deformable 3D Graph Similarity to Track Plant Cells in Unregistered Time Lapse Images
+% }} (under review) \href{https://arxiv.org/abs/2309.11157}{ pre-print}
+
+% \item \textbf{Md Shazid Islam}, SM Mahbubur Rahman, \say{ \textit{Synthesis of Dance by Learning Body Gestures from Music}} (under review in Pattern Recognition)
+% \href{http://lib.buet.ac.bd:8080/xmlui/handle/123456789/5722}
+% {\raisebox{-0.05\height}\ Thesis} \href{https://youtu.be/ATaC7Cj0UIA}{\raisebox{-0.05\height}\ Video}
+
+% \end{itemize}
+
+% \section{PAPER REVIEW}
+% \begin{itemize}
+%     \item Reviewed 3 papers in IEEE Transportation Electrification Conference(ITEC), 2024.
+
+%     \item Reviewed 1 paper in Texas Power and Energy Cconference (TPEC), 2024.
+% \end{itemize}
+
+
+\section{HONORS and AWARDS}
+
+\begin{itemize}
+    \item Dean’s Distinguished Fellowship, University of California, Riverside
+    \item Dean's list Scholarship, Dept. of Electrical and Electronic Engineering, BUET .
+    \item Merit Scholarship, Dept. of Electrical and Electronic Engineering, BUET.
+\end{itemize}
+
+
+\section{GRADUATE COURSES}
+• Advanced Computer Vision  • Pattern Recognition   • Design And Analysis Of Algorithms \\
+• Deep Learning    • Stochastic Processes  • State and Parameter Estimation Theory \\
+• Convex Optimization    • Math Methods for Engineering  • Information Theory
+
+
+
+\printbibliography[heading=none]
+
+
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
+
+
+
+\vfill
+% \center{\footnotesize Last updated: \today}
+
+\end{document}
